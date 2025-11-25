@@ -1,0 +1,591 @@
+/*
+  MeeDo Marketing Site Styles
+  Light theme inspired by clean, airy product landing pages.
+*/
+
+:root {
+  --bg: #ffffff;
+  --surface: #f7f7fb;
+  --text: #111418;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: rgba(214, 41, 27, 1); /* MeeDo red */
+  --accent-contrast: #ffffff;
+  --focus: 0 0 0 3px rgba(91, 127, 255, 0.35);
+  --radius: 14px;
+  --radius-sm: 10px;
+  --shadow-sm: 0 1px 2px rgba(17,20,24,0.04), 0 1px 1px rgba(17,20,24,0.03);
+  --shadow-md: 0 8px 24px rgba(17,20,24,0.08);
+  --shadow-lg: 0 20px 48px rgba(17,20,24,0.12);
+}
+
+* { box-sizing: border-box; }
+html { height: 100%; }
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main { flex: 1; }
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.brand img {
+  width: auto;
+  height: 32px;
+  object-fit: contain;
+}
+.brand .name { font-weight: 700; letter-spacing: 0.2px; }
+
+.nav-links { display: flex; align-items: center; gap: 18px; }
+.nav-links a {
+  padding: 8px 10px;
+  border-radius: 10px;
+  color: var(--muted);
+}
+.nav-links a:hover { color: var(--text); background: var(--surface); }
+.nav-links a.active { color: var(--text); background: var(--surface); font-weight: 600; }
+
+.nav-cta a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: var(--text);
+  color: var(--accent-contrast);
+  box-shadow: var(--shadow-sm);
+}
+.nav-cta a:hover { filter: brightness(0.95); }
+
+.menu-toggle { display: none; }
+
+/* Hero */
+.section-hero {
+  padding: 64px 0 24px 0;
+}
+.hero-card {
+  background: linear-gradient(180deg, #ffffff, #fafbff);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  padding: 32px;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.6px;
+  padding: 6px 10px; border-radius: 999px; background: var(--surface); color: var(--muted);
+  border: 1px solid var(--line);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: start;
+}
+.hero-text { grid-column: 1; }
+.hero-grid .cta-row { grid-column: 1; }
+.hero-figure { grid-column: 2; grid-row: 1 / span 2; }
+
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-text, .hero-grid .cta-row, .hero-figure { grid-column: auto; grid-row: auto; }
+}
+
+@media (max-width: 640px) {
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-text { order: 1; }
+  .hero-figure { order: 2; }
+  .hero-grid .cta-row {
+    order: 3;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+  }
+  .hero-grid .cta-row a {
+    width: 100%;
+    text-align: center;
+    max-width: 320px; /* Limit width */
+    display: flex;
+    justify-content: center;
+  }
+}
+.hero-title { font-size: 48px; line-height: 1.05; margin: 16px 0 12px; letter-spacing: -0.5px; }
+.hero-sub { font-size: 18px; color: var(--muted); margin: 0 0 20px; }
+
+.cta-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+.btn-primary:hover { filter: brightness(0.97); }
+.btn-secondary {
+  display: inline-block;
+  background: var(--surface);
+  color: var(--text);
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+.btn-secondary:hover { background: #f1f2f8; }
+
+.hero-figure {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
+}
+.hero-figure img { width: 100%; height: auto; }
+
+/* Sections */
+.section { padding: 40px 0; }
+.section .section-head { margin-bottom: 20px; }
+.eyebrow { font-size: 12px; letter-spacing: 0.6px; color: var(--muted); text-transform: uppercase; }
+.title { font-size: 28px; letter-spacing: -0.3px; margin: 6px 0 10px; }
+.lead { color: var(--muted); }
+
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+}
+.card h3 { margin: 6px 0 6px; font-size: 18px; }
+.card p { color: var(--muted); margin: 0; }
+
+.card-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Extra vertical spacing between text and buttons in cards and banners */
+.card-actions .btn-primary,
+.card-actions .btn-secondary,
+.cta-banner .btn-primary,
+.cta-banner .btn-secondary {
+  margin-top: 6px;
+}
+
+.screens-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.screen {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.screen img { width: 100%; height: auto; display: block; }
+
+/* Feature Zig-Zag Sections */
+.feature-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+.feature-block:last-child { margin-bottom: 0; }
+
+.feature-content {
+  padding: 20px;
+}
+.feature-content .title {
+  font-size: 32px;
+  margin-top: 8px;
+}
+.feature-content .lead {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.feature-image {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-lg);
+  max-height: 400px; /* Limit height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure image scales nicely within box */
+  max-height: 400px;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  margin-top: 20px;
+  overflow: hidden; /* Contain the scrollbar if we want to hide it or style it */
+}
+
+.timeline-items {
+  display: flex;
+  gap: 0; /* Gap handled by item padding/margin to ensure line connects */
+  overflow-x: auto;
+  padding: 20px 4px 40px 4px; /* Bottom padding for hover lift and scrollbar space */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar for clean look */
+  scrollbar-width: none;
+}
+.timeline-items::-webkit-scrollbar {
+  display: none;
+}
+
+.timeline-item {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 300px; /* Fixed width for consistency */
+  padding: 0 16px; /* Space between items */
+}
+
+/* Connecting line using pseudo-element on each item */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  top: 20px; /* Center of the 40px marker area approx */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--line);
+  z-index: 0;
+}
+
+/* Hide line to the left of the first item and right of the last item */
+.timeline-item:first-child::before {
+  left: 50%;
+}
+.timeline-item:last-child::before {
+  right: 50%;
+}
+
+.timeline-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2; /* Above the line */
+  background: var(--bg); /* To mask line behind dot if needed, but dot has border */
+  padding: 0 10px; /* Small mask */
+}
+
+.timeline-dot {
+  background: var(--bg);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 99px;
+  border: 2px solid var(--accent);
+  white-space: nowrap;
+}
+
+.timeline-content {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.2s;
+}
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Highlight the active/current item (optional, let's say Phase 1 is done, Phase 2 active?) 
+   User didn't specify active state logic, but let's keep Phase 1 styled or make them all equal.
+   Let's keep the "active" style for the first one or maybe the one "In Progress".
+   For now, let's just style them all cleanly, maybe highlight the first one as "Current".
+*/
+.timeline-item:first-child .timeline-dot {
+  background: var(--accent);
+  color: white;
+}
+.timeline-item:first-child .timeline-content {
+  border: 1px solid var(--accent);
+}
+
+
+
+.section-cta {
+  padding: 28px 0 64px 0;
+}
+.cta-banner {
+  border: 1px dashed var(--line);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+/* Team grid */
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.member {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; box-shadow: var(--shadow-sm);
+}
+.avatar {
+  width: 120px; height: 120px; border-radius: 50%; background: var(--surface); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--muted);
+}
+.member h3 { margin: 10px 0 6px; }
+.member p { margin: 0 0 12px 0; color: var(--muted); line-height: 1.5; }
+.member p:last-child { margin-bottom: 0; }
+
+/* Events Specific Styles */
+.event-details {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  color: var(--text);
+  background: var(--surface);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+}
+.detail-item strong { color: var(--accent); }
+
+.scroll-container-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.horizontal-scroll {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 4px 4px 24px 4px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  width: 80%;
+  max-width: 320px;
+  scroll-snap-align: start;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--line);
+}
+.scroll-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); padding: 24px 0; margin-top: 32px; color: var(--muted); }
+.site-footer .row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* Utilities */
+.muted { color: var(--muted); }
+.spacer { height: 16px; }
+
+/* Responsive */
+@media (max-width: 960px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .screens-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+  
+  .feature-block {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+  
+  .feature-content {
+    order: -1;
+  }
+
+  .timeline-items {
+    display: flex;
+    flex-direction: column;
+    overflow-x: visible;
+    gap: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .timeline-items::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    bottom: 0;
+    right: auto;
+    width: 4px;
+    height: auto;
+    background: var(--line);
+    z-index: 0;
+  }
+  
+  .timeline-item {
+    flex: 0 0 auto;
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 0 40px 0;
+  }
+  /* Hide horizontal line elements on mobile */
+  .timeline-item::before {
+    display: none;
+  }
+  
+  .timeline-item:last-child { padding-bottom: 0; }
+  
+  .timeline-marker {
+    margin: 0;
+    min-width: 100px; /* Fixed width for marker area to match line center */
+    justify-content: center;
+    padding: 10px 0; 
+    background: var(--bg);
+  }
+  .timeline-dot {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .timeline-content {
+    text-align: left;
+  }
+}
+@media (max-width: 640px) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  main {
+    padding-top: 65px;
+  }
+  .nav { position: relative; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    left: 20px;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--line);
+  }
+
+  .nav-links[data-open="true"] {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .cards { grid-template-columns: 1fr; }
+  .screens-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 36px; }
+}
+
+/* Simple active state helper when data-active-page is set on body */
+body[data-active-page="home"] a[href="index.html"],
+body[data-active-page="team"] a[href="team.html"],
+body[data-active-page="project"] a[href="project.html"],
+body[data-active-page="investors"] a[href="investors.html"] {
+  color: var(--text);
+  background: var(--surface);
+  font-weight: 700;
+}
+
+/* Accessibility */
+a:focus-visible, button:focus-visible { outline: none; box-shadow: var(--focus); }
