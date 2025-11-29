@@ -16,15 +16,21 @@
           <img src="img/meedoLogo.png" alt="MeeDo logo">
         </a>
         <nav class="nav-links" data-nav-links>
-          <a href="index.html">Home</a>
-          <a href="project.html">Project</a>
-          <a href="team.html">Team</a>
-          <a href="investors.html">Investors</a>
+          <a href="index.html" data-translate="nav_home">Home</a>
+          <a href="project.html" data-translate="nav_project">Project</a>
+          <a href="team.html" data-translate="nav_team">Team</a>
+          <a href="investors.html" data-translate="nav_investors">Investors</a>
         </nav>
-        <div class="nav-cta">
-          <a href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Waitlist&body=Hi%20MeeDo%20team%2C%20please%20add%20me%20to%20the%20waitlist!">Join waitlist</a>
+        <div class="nav-right">
+          <div class="lang-switcher">
+            <button class="lang-dropdown-btn" onclick="toggleLangMenu()">EN</button>
+            <div class="lang-dropdown-menu" id="langMenu">
+              <button class="lang-btn" onclick="changeLang('en')">English</button>
+              <button class="lang-btn" onclick="changeLang('it')">Italiano</button>
+            </div>
+          </div>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">≡</button>
         </div>
-        <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">≡</button>
       </div>
     </header>
 
@@ -32,9 +38,9 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Team</div>
-            <h1 class="title">We are building MeeDo for doers</h1>
-            <p class="lead">We combine product, design, and community-building experience to make spontaneous social activities simple and safe.</p>
+            <div class="eyebrow" data-translate="team_eyebrow">Team</div>
+            <h1 class="title" data-translate="team_title">We are building MeeDo for doers</h1>
+            <p class="lead" data-translate="team_lead">We combine product, design, and community-building experience to make spontaneous social activities simple and safe.</p>
           </div>
 
           <div class="team-grid">
@@ -42,17 +48,17 @@
               <div class="avatar" style="overflow: hidden; padding: 0;">
                 <img src="img/Nicola.jpeg" alt="Nicola Herber" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
-              <h3>Nicola Herber <span class="muted">— CEO & Co‑founder</span></h3>
-              <p>
+              <h3>Nicola Herber <span class="muted" data-translate="nicola_role">— CEO & Co‑founder</span></h3>
+              <p data-translate="nicola_p1">
                 Nicola is pursuing a Master’s in Electronic Engineering in Zurich, specializing in embedded systems.
               </p>
-              <p>
+              <p data-translate="nicola_p2">
                 He’s passionate about sports—especially wingfoiling and sailing—and teaches sailing each year at the Circolo Velico Lago di Lugano.
               </p>
-              <p>
+              <p data-translate="nicola_p3">
                 A curious traveler who loves meeting new people, he spent two months in Australia to level up his English and completed a three‑month thesis exchange in Boston at a Harvard Medical School lab.
               </p>
-              <p>
+              <p data-translate="nicola_p4">
                 Above all, he loves doing activities with friends—exactly the kind of moments MeeDo makes easier.
               </p>
             </article>
@@ -60,34 +66,34 @@
               <div class="avatar" style="overflow: hidden; padding: 0;">
                 <img src="img/Samuele.jpg" alt="Samuele Dei Cas" style="width: 100%; height: 100%; object-fit: cover;">
               </div>
-              <h3>Samuele Dei Cas <span class="muted">— COO & Co‑founder</span></h3>
-              <p>
-                Samuele first trained as a Polymechanic (AFC) before choosing Sports Science at the University of Fribourg. He’s now completing his Master’s in Sports Science in Lausanne.
+              <h3>Samuele Dei Cas <span class="muted" data-translate="samuele_role">— COO & Co‑founder</span></h3>
+              <p data-translate="samuele_p1">
+                Samuele, 24, lives in Ticino and began his journey as a polymechanic (AFC), before dedicating himself to Sports Science at the University of Fribourg. He is now completing a Master’s in Sports Performance at the University of Lausanne.
               </p>
-              <p>
-                Extremely outgoing, he teaches snowboarding, thrives in community settings, and loves bringing people together to do activities with friends—perfectly aligned with MeeDo’s mission.
+              <p data-translate="samuele_p2">
+                Sociable and full of energy, in his free time he teaches snowboarding and practices gymnastics. He feels at ease in community environments and loves creating opportunities to bring people together through shared activities with friends — a lifestyle that fully embodies MeeDo’s mission.
               </p>
             </article>
             <article class="member">
               <div class="avatar">CFO</div>
-              <h3>This could be you! <span class="muted">— CFO</span></h3>
-              <p>
+              <h3><span data-translate="cfo_title">This could be you!</span> <span class="muted" data-translate="cfo_role">— CFO</span></h3>
+              <p data-translate="cfo_p1">
                 We’re an early-stage startup with a big vision, and we’re looking for key builders to take MeeDo from a small project to a successful global company. We believe that every role requires the right person and specific skills!
               </p>
               <p>
-                If you’re excited to shape the product with us from day one, we’d love to talk.
-                <a href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Contact">Get in touch</a>.
+                <span data-translate="cfo_p2">If you’re excited to shape the product with us from day one, we’d love to talk.</span>
+                <a href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Contact" data-translate="cfo_contact">Get in touch</a>.
               </p>
             </article>
           </div>
 
           <div class="spacer"></div>
           <div class="hero-card">
-            <h3 class="title" style="margin-top: 0;">Like the project and want to help?</h3>
-            <p>Beyond core team members, we are always looking for partners, advisors, or simply testers.</p>
-            <p class="muted">If you believe in our vision and want to help us grow—connecting people through real-world activities—you can support us in many ways, from consulting and services to collaborations!</p>
+            <h3 class="title" style="margin-top: 0;" data-translate="team_collab_title">Like the project and want to help?</h3>
+            <p data-translate="team_collab_p1">Beyond core team members, we are always looking for partners, advisors, or simply testers.</p>
+            <p class="muted" data-translate="team_collab_p2">If you believe in our vision and want to help us grow—connecting people through real-world activities—you can support us in many ways, from consulting and services to collaborations!</p>
             <div class="cta-row" style="margin-top: 16px;">
-              <a class="btn-primary" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Collaboration">Contact us</a>
+              <a class="btn-primary" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Collaboration" data-translate="team_contact_us">Contact us</a>
             </div>
           </div>
         </div>
@@ -97,7 +103,7 @@
     <footer class="site-footer">
       <div class="container row">
         <div>© <span id="year"></span> MeeDo</div>
-        <div class="muted">Contact: <a href="mailto:meedo.infos@gmail.com">meedo.infos@gmail.com</a></div>
+        <div class="muted"><span data-translate="footer_contact">Contact:</span> <a href="mailto:meedo.infos@gmail.com">meedo.infos@gmail.com</a></div>
       </div>
       <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>

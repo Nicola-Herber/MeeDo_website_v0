@@ -16,15 +16,21 @@
           <img src="img/meedoLogo.png" alt="MeeDo logo">
         </a>
         <nav class="nav-links" data-nav-links>
-          <a href="index.html">Home</a>
-          <a href="project.html">Project</a>
-          <a href="team.html">Team</a>
-          <a href="investors.html">Investors</a>
+          <a href="index.html" data-translate="nav_home">Home</a>
+          <a href="project.html" data-translate="nav_project">Project</a>
+          <a href="team.html" data-translate="nav_team">Team</a>
+          <a href="investors.html" data-translate="nav_investors">Investors</a>
         </nav>
-        <div class="nav-cta">
-          <a href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Waitlist&body=Hi%20MeeDo%20team%2C%20please%20add%20me%20to%20the%20waitlist!">Join waitlist</a>
+        <div class="nav-right">
+          <div class="lang-switcher">
+            <button class="lang-dropdown-btn" onclick="toggleLangMenu()">EN</button>
+            <div class="lang-dropdown-menu" id="langMenu">
+              <button class="lang-btn" onclick="changeLang('en')">English</button>
+              <button class="lang-btn" onclick="changeLang('it')">Italiano</button>
+            </div>
+          </div>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">≡</button>
         </div>
-        <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">≡</button>
       </div>
     </header>
 
@@ -32,33 +38,33 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">For investors</div>
-            <h1 class="title">Building the social layer for real-world activities</h1>
-            <p class="lead">MeeDo is a consumer social utility that unlocks spontaneous participation in everyday activities. We’re pre-launch and actively validating with early adopters.</p>
+            <div class="eyebrow" data-translate="inv_eyebrow">For investors</div>
+            <h1 class="title" data-translate="inv_title">Building the social layer for real-world activities</h1>
+            <p class="lead" data-translate="inv_lead">MeeDo is a consumer social utility that unlocks spontaneous participation in everyday activities. We’re pre-launch and actively validating with early adopters.</p>
           </div>
 
           <div class="cards">
             <article class="card">
-              <h3>Market</h3>
-              <p>Large and growing: fitness, hobbies, local communities, and travel meetups. Fragmented solutions and clear unmet need.</p>
+              <h3 data-translate="inv_market_title">Market</h3>
+              <p data-translate="inv_market_desc">Large and growing: fitness, hobbies, local communities, and travel meetups. Fragmented solutions and clear unmet need.</p>
             </article>
             <article class="card">
-              <h3>Product</h3>
-              <p>Map-first discovery, ultra-fast creation, and profile-based trust. Mobile-native experience.</p>
+              <h3 data-translate="inv_prod_title">Product</h3>
+              <p data-translate="inv_prod_desc">Map-first discovery, ultra-fast creation, and profile-based trust. Mobile-native experience.</p>
             </article>
             <article class="card">
-              <h3>Go-to-market</h3>
-              <p>Campus and city playbooks: seeding high-density activity hubs and ambassador programs.</p>
+              <h3 data-translate="inv_gtm_title">Go-to-market</h3>
+              <p data-translate="inv_gtm_desc">Campus and city playbooks: seeding high-density activity hubs and ambassador programs.</p>
             </article>
           </div>
 
           <div class="spacer"></div>
           <div class="card">
-            <h3>Intro and materials</h3>
-            <p class="muted">We’re sharing our deck and discussing the roadmap with a small group of partners.</p>
+            <h3 data-translate="inv_intro_title">Intro and materials</h3>
+            <p class="muted" data-translate="inv_intro_desc">We’re sharing our deck and discussing the roadmap with a small group of partners.</p>
             <div class="card-actions">
-              <a class="btn-secondary" href="Bozza_1_MeeDo.pdf">View deck</a>
-              <a class="btn-primary" href="mailto:meedo.infos@gmail.com?subject=Investor%20Intro">Request intro</a>
+              <a class="btn-secondary" href="Lean_Canvas_MeeDo_v1_5.pdf" data-translate="inv_view_deck">View Lean Canvas</a>
+              <a class="btn-primary" href="mailto:meedo.infos@gmail.com?subject=Investor%20Intro" data-translate="inv_req_intro">Request intro</a>
             </div>
           </div>
         </div>
@@ -68,7 +74,7 @@
     <footer class="site-footer">
       <div class="container row">
         <div>© <span id="year"></span> MeeDo</div>
-        <div class="muted">Contact: <a href="mailto:meedo.infos@gmail.com">meedo.infos@gmail.com</a></div>
+        <div class="muted"><span data-translate="footer_contact">Contact:</span> <a href="mailto:meedo.infos@gmail.com">meedo.infos@gmail.com</a></div>
       </div>
       <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>

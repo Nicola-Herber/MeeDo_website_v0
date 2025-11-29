@@ -1,0 +1,152 @@
+{
+  "nav_home": "Home",
+  "nav_project": "Project",
+  "nav_team": "Team",
+  "nav_investors": "Investors",
+  "nav_waitlist": "Join waitlist",
+  
+  "hero_badge": "Coming soon",
+  "hero_title": "Never do an activity alone again!",
+  "hero_sub": "MeeDo connects you with people nearby who want to do the same thing, right now or later — from sports and gym sessions to study groups and hobbies, we got an activity waiting for you!",
+  "hero_cta_notify": "Get notified at launch",
+  "hero_cta_learn": "Learn more",
+
+  "why_eyebrow": "Why MeeDo",
+  "why_title": "Turn \"maybe later\" into \"let's do it\"",
+  "why_lead": "Find companions for your next activity — quickly, safely, and without awkward coordination. Create or join activities based on time, location, and interests.",
+  "why_card1_title": "Discover nearby activities",
+  "why_card1_desc": "Browse a live map of things happening around you: sports, study, coffee, and more.",
+  "why_card2_title": "Host your own in seconds",
+  "why_card2_desc": "Post what you want to do, when, and where. Set capacity and preferences.",
+  "why_card3_title": "Connect with confidence",
+  "why_card3_desc": "Profiles and preferences help you find the right match for each activity.",
+
+  "app_eyebrow": "Inside the app",
+  "app_title": "A quick look at MeeDo",
+  "app_lead": "Here are a few early screens. The product is under active development.",
+  
+  "feat_create_eyebrow": "CREATE",
+  "feat_create_title": "Create an activity in just 4 steps",
+  "feat_create_desc": "Got an idea? Bring it to life in seconds. Set the what, when, and where, and you're ready to go. No complicated forms, just pure action.",
+  
+  "feat_explore_eyebrow": "EXPLORE",
+  "feat_explore_title": "The world is your playground",
+  "feat_explore_desc": "Use the interactive map to find activities happening right now near you, or scout out locations for your next adventure.",
+  
+  "feat_discover_eyebrow": "DISCOVER",
+  "feat_discover_title": "Your personalized feed",
+  "feat_discover_desc": "Instantly see what your friends are planning and discover new activities tailored to your interests. Never miss out on the fun.",
+
+  "feat_track_eyebrow": "TRACKING",
+  "feat_track_title": "Keep track of it all",
+  "feat_track_desc": "Your personal dashboard for every activity you've hosted or joined. Stay organized and relive your best memories with a complete summary.",
+
+  "feat_chat_eyebrow": "COMMUNICATION",
+  "feat_chat_title": "Smart, temporary chats",
+  "feat_chat_desc": "Forget cluttering your messaging apps. Every activity gets a dedicated chat that disappears 24 hours after the event ends. Simple, private, and effective.",
+
+  "feat_comm_eyebrow": "COMMUNITY",
+  "feat_comm_title": "Stay connected",
+  "feat_comm_desc": "Easily add people you meet at activities and build your circle of doers. Real connections happen in the real world, not just online.",
+
+  "cta_launch": "<strong>Launching soon.</strong> Want early access? Become a beta tester and help us shape MeeDo!",
+  "cta_beta": "Apply for beta testing",
+
+  "footer_contact": "Contact:",
+
+  "team_eyebrow": "Team",
+  "team_title": "We are building MeeDo for doers",
+  "team_lead": "We combine product, design, and community-building experience to make spontaneous social activities simple and safe.",
+  
+  "nicola_role": "— CEO & Co‑founder",
+  "nicola_p1": "Nicola is pursuing a Master’s in Electronic Engineering in Zurich, specializing in embedded systems.",
+  "nicola_p2": "He’s passionate about sports—especially wingfoiling and sailing—and teaches sailing each year at the Circolo Velico Lago di Lugano.",
+  "nicola_p3": "A curious traveler who loves meeting new people, he spent two months in Australia to level up his English and completed a three‑month thesis exchange in Boston at a Harvard Medical School lab.",
+  "nicola_p4": "Above all, he loves doing activities with friends—exactly the kind of moments MeeDo makes easier.",
+
+  "samuele_role": "— COO & Co‑founder",
+  "samuele_p1": "Samuele, 24, lives in Ticino and began his journey as a polymechanic (AFC), before dedicating himself to Sports Science at the University of Fribourg. He is now completing a Master’s in Sports Performance at the University of Lausanne.",
+  "samuele_p2": "Sociable and full of energy, in his free time he teaches snowboarding and practices gymnastics. He feels at ease in community environments and loves creating opportunities to bring people together through shared activities with friends — a lifestyle that fully embodies MeeDo’s mission.",
+
+  "cfo_title": "This could be you!",
+  "cfo_role": "— CFO",
+  "cfo_p1": "We’re an early-stage startup with a big vision, and we’re looking for key builders to take MeeDo from a small project to a successful global company. We believe that every role requires the right person and specific skills!",
+  "cfo_p2": "If you’re excited to shape the product with us from day one, we’d love to talk.",
+  "cfo_contact": "Get in touch",
+
+  "team_collab_title": "Like the project and want to help?",
+  "team_collab_p1": "Beyond core team members, we are always looking for partners, advisors, or simply testers.",
+  "team_collab_p2": "If you believe in our vision and want to help us grow—connecting people through real-world activities—you can support us in many ways, from consulting and services to collaborations!",
+  "team_contact_us": "Contact us",
+
+  "project_eyebrow": "Project overview",
+  "project_title": "A social utility for spontaneous activities",
+  "project_lead": "MeeDo reduces the friction of finding people to do things with — solving loneliness and coordination fatigue by matching intent, time, and location.",
+  
+  "proj_prob_title": "The problem",
+  "proj_prob_desc": "People want to be more active but often lack companions at the right time and place. Group chats are noisy; scheduling apps are rigid; communities are fragmented.",
+  "proj_sol_title": "The solution",
+  "proj_sol_desc": "A lightweight way to create and join activities in seconds, discover nearby options on a map, and connect safely through profiles and preferences.",
+  "proj_who_title": "Who it’s for",
+  "proj_who_desc": "Students, young professionals, hobbyists, travelers — anyone who wants to do more, together.",
+
+  "roadmap_eyebrow": "What's next",
+  "roadmap_title": "Roadmap",
+  "roadmap_lead": "Our plan to bring MeeDo to life and grow the community.",
+
+  "phase1": "Phase 1",
+  "phase1_title": "MVP Development",
+  "phase1_desc": "Building the core experience: create activity, join nearby, and chat. Initial testing with our closed beta group.",
+  
+  "phase2": "Phase 2",
+  "phase2_title": "Launch",
+  "phase2_desc": "Public release on App Store. We'll gather initial feedback to refine the app and ensure people love it!",
+  
+  "phase3": "Phase 3",
+  "phase3_title": "Early Funding",
+  "phase3_desc": "Once validated our vision, we'll raise seed capital to fuel our growth. Every great project needs the right resources to become a unicorn.",
+  
+  "phase4": "Phase 4",
+  "phase4_title": "Growth / Market Fit",
+  "phase4_desc": "Combining our roadmap with user feedback to ensure rapid growth and a product that truly satisfies our community.",
+  
+  "phase5": "Phase 5",
+  "phase5_title": "Monetization",
+  "phase5_desc": "Don't worry ;) No paywalls. We're designing a win-win model that adds value for everyone without charging users to use MeeDo.",
+  
+  "phase6": "Phase 6",
+  "phase6_title": "Series A",
+  "phase6_desc": "Scaling up operations, expanding the team, and taking MeeDo to international markets.",
+  
+  "phase7": "Phase 7",
+  "phase7_title": "IPO",
+  "phase7_desc": "The ultimate goal: becoming a public company owned by the community that helped build it.",
+
+  "tech_eyebrow": "Under the hood",
+  "tech_title": "Technology",
+  "tech_lead": "Built for performance and scale using modern, reliable tools.",
+  "tech_rn_desc": "We use React Native to deliver a truly native experience on both iOS and Android from a single codebase. This allows us to iterate fast and maintain feature parity across platforms.",
+  "tech_supabase_desc": "Our backend is powered by Supabase, providing us with a robust PostgreSQL database, real-time subscriptions for chat and live updates, and secure authentication out of the box.",
+  
+  "proj_feedback1": "Have feedback or want to collaborate?",
+  "proj_feedback2": "Email us",
+
+  "inv_eyebrow": "For investors",
+  "inv_title": "Building the social layer for real-world activities",
+  "inv_lead": "MeeDo is a consumer social utility that unlocks spontaneous participation in everyday activities. We’re pre-launch and actively validating with early adopters.",
+  "inv_market_title": "Market",
+  "inv_market_desc": "Millions of socially active students, expats, and young professionals crave offline plans yet still rely on chat apps or rigid event tools. MeeDo targets this underserved gap across European cities with a dedicated layer for spontaneous small group activities.",
+  "inv_prod_title": "Product",
+  "inv_prod_desc": "MeeDo is the mobile command center for real-life plans: create or join an activity with filters for time, place, and vibe, spark instant group chats, and keep trusted circles close; everything is bilingual, fast, and built for on-the-go coordination.",
+  "inv_gtm_title": "Go-to-market",
+  "inv_gtm_desc": "We seed high-density hubs such as campuses, gyms, and coworking spaces through storytelling on Instagram and TikTok, local ambassadors, and city challenges. Community and expat-media partnerships amplify word of mouth until each market runs on MeeDo.",
+  "inv_intro_title": "Intro and materials",
+  "inv_intro_desc": "We’re sharing our deck and discussing the roadmap with a small group of partners.",
+  "inv_view_deck": "View Lean Canvas",
+  "inv_req_intro": "Request intro",
+
+  "404_title": "Page not found",
+  "404_desc": "The page you are looking for doesn't exist or has been moved.",
+  "404_home": "Go back home"
+}
+

@@ -35,4 +35,56 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollContainer.addEventListener('mousedown', stopScroll);
     scrollContainer.addEventListener('touchstart', stopScroll);
   }
+
+  // Language switching logic
+  const savedLang = localStorage.getItem("lang") || "en"; // Default to English
+  changeLang(savedLang);
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    const switcher = document.querySelector('.lang-switcher');
+    const menu = document.getElementById('langMenu');
+    if (switcher && menu && !switcher.contains(e.target)) {
+      menu.classList.remove('show');
+    }
+  });
 });
+
+function toggleLangMenu() {
+  const menu = document.getElementById('langMenu');
+  if (menu) menu.classList.toggle('show');
+}
+
+function changeLang(lang) {
+  fetch(`lang-${lang}.json`)
+    .then(response => response.json())
+    .then(data => {
+      document.querySelectorAll("[data-translate]").forEach(el => {
+        const key = el.getAttribute("data-translate");
+        if (data[key]) {
+          el.innerHTML = data[key];
+        }
+      });
+      localStorage.setItem("lang", lang); 
+      
+      // Update dropdown button text
+      const dropdownBtn = document.querySelector('.lang-dropdown-btn');
+      if (dropdownBtn) {
+        dropdownBtn.textContent = lang.toUpperCase();
+      }
+
+      // Update active state
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        if (btn.getAttribute("onclick") && btn.getAttribute("onclick").includes(lang)) {
+          btn.classList.add("active");
+        } else {
+          btn.classList.remove("active");
+        }
+      });
+      
+      // Close menu
+      const menu = document.getElementById('langMenu');
+      if (menu) menu.classList.remove('show');
+    })
+    .catch(err => console.error("Error loading language file:", err));
+}

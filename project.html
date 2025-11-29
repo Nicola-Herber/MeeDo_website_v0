@@ -16,15 +16,21 @@
           <img src="img/meedoLogo.png" alt="MeeDo logo">
         </a>
         <nav class="nav-links" data-nav-links>
-          <a href="index.html">Home</a>
-          <a href="project.html">Project</a>
-          <a href="team.html">Team</a>
-          <a href="investors.html">Investors</a>
+          <a href="index.html" data-translate="nav_home">Home</a>
+          <a href="project.html" data-translate="nav_project">Project</a>
+          <a href="team.html" data-translate="nav_team">Team</a>
+          <a href="investors.html" data-translate="nav_investors">Investors</a>
         </nav>
-        <div class="nav-cta">
-          <a href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Waitlist&body=Hi%20MeeDo%20team%2C%20please%20add%20me%20to%20the%20waitlist!">Join waitlist</a>
+        <div class="nav-right">
+          <div class="lang-switcher">
+            <button class="lang-dropdown-btn" onclick="toggleLangMenu()">EN</button>
+            <div class="lang-dropdown-menu" id="langMenu">
+              <button class="lang-btn" onclick="changeLang('en')">English</button>
+              <button class="lang-btn" onclick="changeLang('it')">Italiano</button>
+            </div>
+          </div>
+          <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">≡</button>
         </div>
-        <button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">≡</button>
       </div>
     </header>
 
@@ -32,23 +38,23 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Project overview</div>
-            <h1 class="title">A social utility for spontaneous activities</h1>
-            <p class="lead">MeeDo reduces the friction of finding people to do things with — solving loneliness and coordination fatigue by matching intent, time, and location.</p>
+            <div class="eyebrow" data-translate="project_eyebrow">Project overview</div>
+            <h1 class="title" data-translate="project_title">A social utility for spontaneous activities</h1>
+            <p class="lead" data-translate="project_lead">MeeDo reduces the friction of finding people to do things with — solving loneliness and coordination fatigue by matching intent, time, and location.</p>
           </div>
 
           <div class="cards">
             <article class="card">
-              <h3>The problem</h3>
-              <p>People want to be more active but often lack companions at the right time and place. Group chats are noisy; scheduling apps are rigid; communities are fragmented.</p>
+              <h3 data-translate="proj_prob_title">The problem</h3>
+              <p data-translate="proj_prob_desc">People want to be more active but often lack companions at the right time and place. Group chats are noisy; scheduling apps are rigid; communities are fragmented.</p>
             </article>
             <article class="card">
-              <h3>The solution</h3>
-              <p>A lightweight way to create and join activities in seconds, discover nearby options on a map, and connect safely through profiles and preferences.</p>
+              <h3 data-translate="proj_sol_title">The solution</h3>
+              <p data-translate="proj_sol_desc">A lightweight way to create and join activities in seconds, discover nearby options on a map, and connect safely through profiles and preferences.</p>
             </article>
             <article class="card">
-              <h3>Who it’s for</h3>
-              <p>Students, young professionals, hobbyists, travelers — anyone who wants to do more, together.</p>
+              <h3 data-translate="proj_who_title">Who it’s for</h3>
+              <p data-translate="proj_who_desc">Students, young professionals, hobbyists, travelers — anyone who wants to do more, together.</p>
             </article>
           </div>
         </div>
@@ -57,73 +63,73 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">What's next</div>
-            <h2 class="title">Roadmap</h2>
-            <p class="lead">Our plan to bring MeeDo to life and grow the community.</p>
+            <div class="eyebrow" data-translate="roadmap_eyebrow">What's next</div>
+            <h2 class="title" data-translate="roadmap_title">Roadmap</h2>
+            <p class="lead" data-translate="roadmap_lead">Our plan to bring MeeDo to life and grow the community.</p>
           </div>
           
           <div class="timeline">
             <div class="timeline-items" data-auto-scroll-timeline>
               <!-- Phase 1 -->
               <div class="timeline-item">
-                <div class="timeline-marker"><span class="timeline-dot">Phase 1</span></div>
+                <div class="timeline-marker"><span class="timeline-dot" data-translate="phase1">Phase 1</span></div>
                 <div class="timeline-content">
-                  <h3>MVP Development</h3>
-                  <p class="muted">Building the core experience: create activity, join nearby, and chat. Initial testing with our closed beta group.</p>
+                  <h3 data-translate="phase1_title">MVP Development</h3>
+                  <p class="muted" data-translate="phase1_desc">Building the core experience: create activity, join nearby, and chat. Initial testing with our closed beta group.</p>
                 </div>
               </div>
               
               <!-- Phase 2 -->
               <div class="timeline-item">
-                <div class="timeline-marker"><span class="timeline-dot">Phase 2</span></div>
+                <div class="timeline-marker"><span class="timeline-dot" data-translate="phase2">Phase 2</span></div>
                 <div class="timeline-content">
-                  <h3>Launch</h3>
-                  <p class="muted">Public release on App Store. We'll gather initial feedback to refine the app and ensure people love it!</p>
+                  <h3 data-translate="phase2_title">Launch</h3>
+                  <p class="muted" data-translate="phase2_desc">Public release on App Store. We'll gather initial feedback to refine the app and ensure people love it!</p>
                 </div>
               </div>
               
               <!-- Phase 3 -->
               <div class="timeline-item">
-                <div class="timeline-marker"><span class="timeline-dot">Phase 3</span></div>
+                <div class="timeline-marker"><span class="timeline-dot" data-translate="phase3">Phase 3</span></div>
                 <div class="timeline-content">
-                  <h3>Early Funding</h3>
-                  <p class="muted">Once validated our vision, we'll raise seed capital to fuel our growth. Every great project needs the right resources to become a unicorn.</p>
+                  <h3 data-translate="phase3_title">Early Funding</h3>
+                  <p class="muted" data-translate="phase3_desc">Once validated our vision, we'll raise seed capital to fuel our growth. Every great project needs the right resources to become a unicorn.</p>
                 </div>
               </div>
 
               <!-- Phase 4 -->
               <div class="timeline-item">
-                <div class="timeline-marker"><span class="timeline-dot">Phase 4</span></div>
+                <div class="timeline-marker"><span class="timeline-dot" data-translate="phase4">Phase 4</span></div>
                 <div class="timeline-content">
-                  <h3>Growth / Market Fit</h3>
-                  <p class="muted">Combining our roadmap with user feedback to ensure rapid growth and a product that truly satisfies our community.</p>
+                  <h3 data-translate="phase4_title">Growth / Market Fit</h3>
+                  <p class="muted" data-translate="phase4_desc">Combining our roadmap with user feedback to ensure rapid growth and a product that truly satisfies our community.</p>
                 </div>
               </div>
 
               <!-- Phase 5 -->
               <div class="timeline-item">
-                <div class="timeline-marker"><span class="timeline-dot">Phase 5</span></div>
+                <div class="timeline-marker"><span class="timeline-dot" data-translate="phase5">Phase 5</span></div>
                 <div class="timeline-content">
-                  <h3>Monetization</h3>
-                  <p class="muted">Don't worry ;) No paywalls. We're designing a win-win model that adds value for everyone without charging users to use MeeDo.</p>
+                  <h3 data-translate="phase5_title">Monetization</h3>
+                  <p class="muted" data-translate="phase5_desc">Don't worry ;) No paywalls. We're designing a win-win model that adds value for everyone without charging users to use MeeDo.</p>
                 </div>
               </div>
 
               <!-- Phase 6 -->
               <div class="timeline-item">
-                <div class="timeline-marker"><span class="timeline-dot">Phase 6</span></div>
+                <div class="timeline-marker"><span class="timeline-dot" data-translate="phase6">Phase 6</span></div>
                 <div class="timeline-content">
-                  <h3>Series A</h3>
-                  <p class="muted">Scaling up operations, expanding the team, and taking MeeDo to international markets.</p>
+                  <h3 data-translate="phase6_title">Series A</h3>
+                  <p class="muted" data-translate="phase6_desc">Scaling up operations, expanding the team, and taking MeeDo to international markets.</p>
                 </div>
               </div>
 
               <!-- Phase 7 -->
               <div class="timeline-item">
-                <div class="timeline-marker"><span class="timeline-dot">Phase 7</span></div>
+                <div class="timeline-marker"><span class="timeline-dot" data-translate="phase7">Phase 7</span></div>
                 <div class="timeline-content">
-                  <h3>IPO</h3>
-                  <p class="muted">The ultimate goal: becoming a public company owned by the community that helped build it.</p>
+                  <h3 data-translate="phase7_title">IPO</h3>
+                  <p class="muted" data-translate="phase7_desc">The ultimate goal: becoming a public company owned by the community that helped build it.</p>
                 </div>
               </div>
 
@@ -135,9 +141,9 @@
       <section class="section">
         <div class="container">
           <div class="section-head">
-            <div class="eyebrow">Under the hood</div>
-            <h2 class="title">Technology</h2>
-            <p class="lead">Built for performance and scale using modern, reliable tools.</p>
+            <div class="eyebrow" data-translate="tech_eyebrow">Under the hood</div>
+            <h2 class="title" data-translate="tech_title">Technology</h2>
+            <p class="lead" data-translate="tech_lead">Built for performance and scale using modern, reliable tools.</p>
           </div>
           
           <div class="feature-block" style="margin-bottom: 0; gap: 40px;">
@@ -146,7 +152,7 @@
                 <img src="img/reactLogo.png" alt="React Native logo" style="width: 120px; height: 120px; object-fit: contain; flex-shrink: 0;">
                 <div>
                   <h3 class="title" style="font-size: 24px; margin-top: 0;">React Native</h3>
-                  <p style="margin: 8px 0 0;">We use React Native to deliver a truly native experience on both iOS and Android from a single codebase. This allows us to iterate fast and maintain feature parity across platforms.</p>
+                  <p style="margin: 8px 0 0;" data-translate="tech_rn_desc">We use React Native to deliver a truly native experience on both iOS and Android from a single codebase. This allows us to iterate fast and maintain feature parity across platforms.</p>
                 </div>
               </div>
               
@@ -154,7 +160,7 @@
                 <img src="img/supabaseLogo.png" alt="Supabase logo" style="width: 120px; height: 120px; object-fit: contain; flex-shrink: 0;">
                 <div>
                   <h3 class="title" style="font-size: 24px; margin-top: 0;">Supabase</h3>
-                  <p style="margin: 8px 0 0;">Our backend is powered by Supabase, providing us with a robust PostgreSQL database, real-time subscriptions for chat and live updates, and secure authentication out of the box.</p>
+                  <p style="margin: 8px 0 0;" data-translate="tech_supabase_desc">Our backend is powered by Supabase, providing us with a robust PostgreSQL database, real-time subscriptions for chat and live updates, and secure authentication out of the box.</p>
                 </div>
               </div>
             </div>
@@ -168,11 +174,11 @@
       <section class="section-cta">
         <div class="container">
           <div class="cta-banner">
-            <div>
+            <div data-translate="proj_feedback1">
               Have feedback or want to collaborate?
             </div>
             <div>
-              <a class="btn-primary" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Project%20Inquiry">Email us</a>
+              <a class="btn-primary" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Project%20Inquiry" data-translate="proj_feedback2">Email us</a>
             </div>
           </div>
         </div>
@@ -182,7 +188,7 @@
     <footer class="site-footer">
       <div class="container row">
         <div>© <span id="year"></span> MeeDo</div>
-        <div class="muted">Contact: <a href="mailto:meedo.infos@gmail.com">meedo.infos@gmail.com</a></div>
+        <div class="muted"><span data-translate="footer_contact">Contact:</span> <a href="mailto:meedo.infos@gmail.com">meedo.infos@gmail.com</a></div>
       </div>
       <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>
