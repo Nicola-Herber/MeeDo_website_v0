@@ -3,9 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MeeDo — Never do an activity alone again</title>
-    <meta name="description" content="MeeDo helps you find people nearby to do activities together. Coming soon — join the waitlist.">
-    <link rel="preload" as="image" href="img/phone_render_tilted_left.png">
+    <title>MeeDo - Never do an activity alone again</title>
+    <meta name="description" content="MeeDo helps you find people nearby to do activities together. Coming soon - join the waitlist.">
     <link rel="icon" href="img/meedoLogoDo.png">
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
@@ -17,14 +16,14 @@
           <img src="img/meedoLogo.png" alt="MeeDo logo">
         </a>
         <nav class="nav-links" data-nav-links>
-          <a href="index.html" data-translate="nav_home">Home</a>
+          <a href="index.html" class="active" data-translate="nav_home">Home</a>
           <a href="project.html" data-translate="nav_project">Project</a>
           <a href="team.html" data-translate="nav_team">Team</a>
           <a href="investors.html" data-translate="nav_investors">Investors</a>
         </nav>
         <div class="nav-right">
           <div class="lang-switcher">
-            <button class="lang-dropdown-btn" onclick="toggleLangMenu()">EN</button>
+            <button class="lang-dropdown-btn" onclick="toggleLangMenu()">EN ▾</button>
             <div class="lang-dropdown-menu" id="langMenu">
               <button class="lang-btn" onclick="changeLang('en')">English</button>
               <button class="lang-btn" onclick="changeLang('it')">Italiano</button>
@@ -36,157 +35,251 @@
     </header>
 
     <main>
+      <div id="sponsor-popup" class="sponsor-popup">
+        <div class="popup-content">
+          <p data-translate="popup_text">Like what you're seeing?</p>
+          <a href="investors.html" class="btn-xs" data-translate="popup_cta">Become a sponsor</a>
+        </div>
+        <button class="close-popup" onclick="closePopup()">×</button>
+      </div>
+
       <section class="section-hero">
+        <div class="hero-bg"></div>
         <div class="container">
-          <div class="hero-card">
-            <div class="hero-grid">
-              <div class="hero-text">
-                <span class="badge" data-translate="hero_badge">Coming soon</span>
-                <div class="spacer"></div>
-                <h1 class="hero-title" data-translate="hero_title">Never do an activity alone again!</h1>
-                <p class="hero-sub" data-translate="hero_sub">MeeDo connects you with people nearby who want to do the same thing, right now or later, from sports and gym sessions to study groups and hobbies, we got an activity waiting for you!</p>
+          <div class="hero-content">
+            <span class="hero-badge" data-translate="hero_badge">✨ Coming soon on iOS & Android</span>
+            <h1 class="hero-title" data-translate="hero_title">Never do an activity alone again!</h1>
+            
+            <!-- Mobile Inline Phone -->
+            <div class="hero-mobile-phone-inline">
+              <img src="img/ski_touring.png" alt="App Screen">
+            </div>
+
+            <p class="hero-sub" data-translate="hero_sub">MeeDo connects you with people nearby who want to do the same thing, right now or later.</p>
+          </div>
+
+          <!-- Visual Grid (TripBFF Style) -->
+          <div class="hero-visual-grid">
+            <div class="hero-col">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/surf.jpg" alt="Surf">
+                <span class="hero-card-label">Surf</span>
               </div>
-              <div class="hero-figure">
-                <img src="img/Mock_phone_cover.png" alt="MeeDo app screens" style="width:100%; height:auto;">
-              </div>
-              <div class="cta-row">
-                <a class="btn-primary" data-translate="hero_cta_notify" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Waitlist&body=Hi%20MeeDo%20team%2C%20please%20add%20me%20to%20the%20waitlist!">Get notified at launch</a>
-                <a class="btn-secondary" data-translate="hero_cta_learn" href="project.html">Learn more</a>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/dinner.jpg" alt="Dinner">
+                <span class="hero-card-label">Dinner</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <div class="eyebrow" data-translate="why_eyebrow">Why MeeDo</div>
-            <h2 class="title" data-translate="why_title">Turn "maybe later" into "let's do it"</h2>
-            <p class="lead" data-translate="why_lead">Find companions for your next activity — quickly, safely, and without awkward coordination. Create or join activities based on time, location, and interests.</p>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <h3 data-translate="why_card1_title">Discover nearby activities</h3>
-              <p data-translate="why_card1_desc">Browse a live map of things happening around you: sports, study, coffee, and more.</p>
-            </article>
-            <article class="card">
-              <h3 data-translate="why_card2_title">Host your own in seconds</h3>
-              <p data-translate="why_card2_desc">Post what you want to do, when, and where. Set capacity and preferences.</p>
-            </article>
-            <article class="card">
-              <h3 data-translate="why_card3_title">Connect with confidence</h3>
-              <p data-translate="why_card3_desc">Profiles and preferences help you find the right match for each activity.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-head">
-            <div class="eyebrow" data-translate="app_eyebrow">Inside the app</div>
-            <h2 class="title" data-translate="app_title">A quick look at MeeDo</h2>
-            <p class="lead" data-translate="app_lead">Here are a few early screens. The product is under active development.</p>
-          </div>
-
-          <!-- 1. Create Activity: Image Left, Text Right -->
-          <div class="feature-block">
-            <div class="feature-image">
-              <img src="img/Mock_phone_dummy.png" alt="Create activity screen">
+            <div class="hero-col">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/hike.jpg" alt="Hike">
+                <span class="hero-card-label">Hike</span>
+              </div>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/train.jpg" alt="Train">
+                <span class="hero-card-label">Train</span>
+              </div>
             </div>
-            <div class="feature-content">
-              <div class="eyebrow" data-translate="feat_create_eyebrow">CREATE</div>
-              <h3 class="title" data-translate="feat_create_title">Create an activity in just 4 steps</h3>
-              <p class="lead" data-translate="feat_create_desc">Got an idea? Bring it to life in seconds. Set the what, when, and where, and you're ready to go. No complicated forms, just pure action.</p>
+            <div class="hero-col hero-center">
+              <!-- Center Phone -->
+              <div class="hero-card hero-card-center-img">
+                <img src="img/ski_touring.png" alt="App Screen">
+              </div>
             </div>
-          </div>
-
-          <!-- 2. Map Search: Text Left, Image Right -->
-          <div class="feature-block">
-            <div class="feature-content">
-              <div class="eyebrow" data-translate="feat_explore_eyebrow">EXPLORE</div>
-              <h3 class="title" data-translate="feat_explore_title">The world is your playground</h3>
-              <p class="lead" data-translate="feat_explore_desc">Use the interactive map to find activities happening right now near you, or scout out locations for your next adventure.</p>
+            <div class="hero-col">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/sunset.jpg" alt="Sunset Yoga">
+                <span class="hero-card-label">Chill</span>
+              </div>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/sup.jpg" alt="SUP">
+                <span class="hero-card-label">SUP</span>
+              </div>
             </div>
-            <div class="feature-image">
-              <img src="img/Mock_phone_dummy.png" alt="Map search screen">
+            <div class="hero-col">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/run.jpg" alt="Run">
+                <span class="hero-card-label">Run</span>
+              </div>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/drink.jpg" alt="Drink">
+                <span class="hero-card-label">Drink</span>
+              </div>
             </div>
-          </div>
-
-          <!-- 3. Discovery: Image Left, Text Right -->
-          <div class="feature-block">
-            <div class="feature-image">
-              <img src="img/Mock_phone_dummy.png" alt="Home feed screen">
+            
+            <!-- Mobile Duplicate for Infinite Scroll -->
+            <div class="hero-col mobile-scroll-clone">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/surf.jpg" alt="Surf">
+                <span class="hero-card-label">Surf</span>
+              </div>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/dinner.jpg" alt="Dinner">
+                <span class="hero-card-label">Dinner</span>
+              </div>
             </div>
-            <div class="feature-content">
-              <div class="eyebrow" data-translate="feat_discover_eyebrow">DISCOVER</div>
-              <h3 class="title" data-translate="feat_discover_title">Your personalized feed</h3>
-              <p class="lead" data-translate="feat_discover_desc">Instantly see what your friends are planning and discover new activities tailored to your interests. Never miss out on the fun.</p>
+            <div class="hero-col mobile-scroll-clone">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/hike.jpg" alt="Hike">
+                <span class="hero-card-label">Hike</span>
+              </div>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/train.jpg" alt="Train">
+                <span class="hero-card-label">Train</span>
+              </div>
             </div>
-          </div>
-
-          <!-- 4. Profile: Text Left, Image Right -->
-          <div class="feature-block">
-            <div class="feature-content">
-              <div class="eyebrow" data-translate="feat_track_eyebrow">TRACKING</div>
-              <h3 class="title" data-translate="feat_track_title">Keep track of it all</h3>
-              <p class="lead" data-translate="feat_track_desc">Your personal dashboard for every activity you've hosted or joined. Stay organized and relive your best memories with a complete summary.</p>
+             <div class="hero-col mobile-scroll-clone">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/sunset.jpg" alt="Sunset Yoga">
+                <span class="hero-card-label">Chill</span>
+              </div>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/sup.jpg" alt="SUP">
+                <span class="hero-card-label">SUP</span>
+              </div>
             </div>
-            <div class="feature-image">
-              <img src="img/Mock_phone_dummy.png" alt="User profile screen">
-            </div>
-          </div>
-
-          <!-- 5. Chat: Image Left, Text Right -->
-          <div class="feature-block">
-            <div class="feature-image">
-              <img src="img/Mock_phone_dummy.png" alt="App interface generic">
-            </div>
-            <div class="feature-content">
-              <div class="eyebrow" data-translate="feat_chat_eyebrow">COMMUNICATION</div>
-              <h3 class="title" data-translate="feat_chat_title">Smart, temporary chats</h3>
-              <p class="lead" data-translate="feat_chat_desc">Forget cluttering your messaging apps. Every activity gets a dedicated chat that disappears 24 hours after the event ends. Simple, private, and effective.</p>
-            </div>
-          </div>
-
-          <!-- 6. Friends: Text Left, Image Right -->
-          <div class="feature-block">
-            <div class="feature-content">
-              <div class="eyebrow" data-translate="feat_comm_eyebrow">COMMUNITY</div>
-              <h3 class="title" data-translate="feat_comm_title">Stay connected</h3>
-              <p class="lead" data-translate="feat_comm_desc">Easily add people you meet at activities and build your circle of doers. Real connections happen in the real world, not just online.</p>
-            </div>
-            <div class="feature-image">
-              <img src="img/Mock_phone_dummy.png" alt="Edit profile / friends">
+            <div class="hero-col mobile-scroll-clone">
+              <div class="hero-card hero-card-overlay">
+                <img src="img/run.jpg" alt="Run">
+                <span class="hero-card-label">Run</span>
+              </div>
+              <div class="hero-card hero-card-overlay">
+                <img src="img/drink.jpg" alt="Drink">
+                <span class="hero-card-label">Drink</span>
+              </div>
             </div>
           </div>
           
+          <!-- Mobile Specific Phone Container REMOVED -->
         </div>
       </section>
 
-      <section class="section-cta">
+      <div class="marquee-section">
+        <div class="marquee-track">
+          <span class="marquee-item">🏄 Surf Crew</span>
+          <span class="marquee-item">🧗 Climbing Buddy</span>
+          <span class="marquee-item">🎧 Study Jam</span>
+          <span class="marquee-item">🏃 Sunrise Run</span>
+          <span class="marquee-item">🧘‍♀️ Morning Yoga</span>
+          <span class="marquee-item">☕️ Coffee Chat</span>
+          <span class="marquee-item">🎾 Padel Match</span>
+          <!-- Duplicate set for seamless loop -->
+          <span class="marquee-item">🏄 Surf Crew</span>
+          <span class="marquee-item">🧗 Climbing Buddy</span>
+          <span class="marquee-item">🎧 Study Jam</span>
+          <span class="marquee-item">🏃 Sunrise Run</span>
+          <span class="marquee-item">🧘‍♀️ Morning Yoga</span>
+          <span class="marquee-item">☕️ Coffee Chat</span>
+          <span class="marquee-item">🎾 Padel Match</span>
+        </div>
+      </div>
+
+      <section class="section-features app-previews">
         <div class="container">
-          <div class="cta-banner">
-            <div data-translate="cta_launch">
-              <strong>Launching soon.</strong> Want early access? Become a beta tester and help us shape MeeDo!
+          <div class="section-header">
+            <span class="eyebrow" data-translate="why_eyebrow">Discover Possibilities</span>
+            <h2 class="section-title mobile-title-break" data-translate="why_title"><span>Turn</span> <span>"maybe later"</span> <span>into</span> <span>"let's do it"</span></h2>
+            <p class="section-lead" data-translate="why_lead">Find companions for your next activity - quickly, safely, and without awkward coordination.</p>
+          </div>
+
+          <div class="app-preview">
+            <div class="app-preview-text">
+              <span class="eyebrow" data-translate="feat_create_eyebrow">CREATE</span>
+              <h3 class="app-preview-title" data-translate="feat_create_title">Create an activity in just 4 steps</h3>
+              <p class="section-lead" data-translate="feat_create_desc">Spin up a plan in seconds. Choose who sees it, set vibe, time, and place - no messy chats, just action.</p>
+              <ul class="app-preview-points">
+                <li data-translate="feat_create_point1">Pick who sees it and the vibe - public, friends, or invite-only.</li>
+                <li data-translate="feat_create_point2">Drop a pin, set time and capacity, and you're live.</li>
+              </ul>
             </div>
-            <div>
-              <a class="btn-primary" data-translate="cta_beta" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Waitlist&body=Hi%20MeeDo%20team%2C%20please%20add%20me%20to%20the%20waitlist!">Apply for beta testing</a>
+            <div class="app-preview-media">
+              <img src="img/Mock_phone_dummy.png" alt="Create Activity">
+            </div>
+          </div>
+
+          <div class="app-preview reverse">
+            <div class="app-preview-text">
+              <span class="eyebrow" data-translate="feat_explore_eyebrow">EXPLORE</span>
+              <h3 class="app-preview-title" data-translate="feat_explore_title">See what's happening around you</h3>
+              <p class="section-lead" data-translate="feat_explore_desc">Browse a live map of nearby activities and jump in when the timing fits.</p>
+              <ul class="app-preview-points">
+                <li data-translate="feat_explore_point1">Filter by time, vibe, and distance to find the right crew fast.</li>
+                <li data-translate="feat_explore_point2">Tap to join and chat instantly with people already heading there.</li>
+              </ul>
+            </div>
+            <div class="app-preview-media">
+              <img src="img/map_search_1.PNG" alt="Map Search">
+            </div>
+          </div>
+
+          <div class="app-preview">
+            <div class="app-preview-text">
+              <span class="eyebrow" data-translate="feat_discover_eyebrow">DISCOVER</span>
+              <h3 class="app-preview-title" data-translate="feat_discover_title">Stay in sync with your circle</h3>
+              <p class="section-lead" data-translate="feat_discover_desc">Keep up with friends and trusted groups so plans happen effortlessly.</p>
+              <ul class="app-preview-points">
+                <li data-translate="feat_discover_point1">See what your circle is doing and RSVP without endless coordination.</li>
+                <li data-translate="feat_discover_point2">Build momentum with quick reactions and chats that expire after the event.</li>
+              </ul>
+            </div>
+            <div class="app-preview-media">
+              <img src="img/userProfile_activities.png" alt="Profile">
             </div>
           </div>
         </div>
       </section>
+
+      <section class="section-connect">
+        <div class="container">
+          <div class="connect-content">
+            <h2 class="connect-title" data-translate="feat_comm_title">Connect with doers worldwide</h2>
+            <p class="section-lead" style="color: rgba(255,255,255,0.8);" data-translate="feat_comm_desc">Easily add people you meet at activities and build your circle of doers.</p>
+            <a href="mailto:meedo.infos@gmail.com?subject=Beta%20Tester%20Application&body=Hello%20MeeDo%20Team,%0D%0A%0D%0AI%20would%20love%20to%20become%20a%20beta%20tester%20for%20MeeDo!%0D%0A%0D%0AMy%20device:%20[iOS/Android]%0D%0A%0D%0ABest%20regards," class="btn connect-btn">Become a beta tester</a>
+          </div>
+          <!-- Floating Elements (Decoration) -->
+          <div class="floating-bubble bubble-1" style="animation-delay: 0s;">👋 Hi there!</div>
+          <div class="floating-bubble bubble-2" style="animation-delay: 2s;">🚀 Let's go!</div>
+          <div class="floating-bubble bubble-3" style="animation-delay: 1s;">📍 Zurich</div>
+          <div class="floating-bubble bubble-4" style="animation-delay: 3s;">📸 Photos?</div>
+        </div>
+      </section>
+
+
     </main>
 
     <footer class="site-footer">
-      <div class="container row">
-        <div>© <span id="year"></span> MeeDo</div>
-        <div class="muted"><span data-translate="footer_contact">Contact:</span> <a href="mailto:meedo.infos@gmail.com">meedo.infos@gmail.com</a></div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand" style="margin-bottom: 16px;">
+              <img src="img/meedoLogo.png" alt="MeeDo">
+            </div>
+            <p>Turn "maybe later" into "let's do it". The app for spontaneous real-world activities.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <nav class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="team.html">Team</a>
+              <a href="project.html">Project</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <nav class="footer-links">
+              <a href="mailto:meedo.infos@gmail.com">Contact Us</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>© <span id="year"></span> MeeDo. All rights reserved.</div>
+          <div class="lang-switcher-footer">
+            <button class="lang-btn" onclick="changeLang('en')" style="width: auto; display: inline;">English</button>
+            <button class="lang-btn" onclick="changeLang('it')" style="width: auto; display: inline;">Italiano</button>
+          </div>
+        </div>
       </div>
       <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     </footer>
   </body>
-  </html>
-
-
+</html>

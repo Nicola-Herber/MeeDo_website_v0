@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MeeDo — Project</title>
+    <title>MeeDo - Project</title>
     <meta name="description" content="Project overview, vision, and early roadmap for MeeDo.">
     <link rel="icon" href="img/meedoLogoDo.png">
     <link rel="stylesheet" href="styles.css">
@@ -17,7 +17,7 @@
         </a>
         <nav class="nav-links" data-nav-links>
           <a href="index.html" data-translate="nav_home">Home</a>
-          <a href="project.html" data-translate="nav_project">Project</a>
+          <a href="project.html" class="active" data-translate="nav_project">Project</a>
           <a href="team.html" data-translate="nav_team">Team</a>
           <a href="investors.html" data-translate="nav_investors">Investors</a>
         </nav>
@@ -37,13 +37,13 @@
     <main>
       <section class="section">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head" style="margin-bottom: 40px;">
             <div class="eyebrow" data-translate="project_eyebrow">Project overview</div>
             <h1 class="title" data-translate="project_title">A social utility for spontaneous activities</h1>
-            <p class="lead" data-translate="project_lead">MeeDo reduces the friction of finding people to do things with — solving loneliness and coordination fatigue by matching intent, time, and location.</p>
+            <p class="lead" data-translate="project_lead">MeeDo reduces the friction of finding people to do things with - solving loneliness and coordination fatigue by matching intent, time, and location.</p>
           </div>
 
-          <div class="cards">
+          <div class="cards" style="margin-top: 40px;">
             <article class="card">
               <h3 data-translate="proj_prob_title">The problem</h3>
               <p data-translate="proj_prob_desc">People want to be more active but often lack companions at the right time and place. Group chats are noisy; scheduling apps are rigid; communities are fragmented.</p>
@@ -54,21 +54,22 @@
             </article>
             <article class="card">
               <h3 data-translate="proj_who_title">Who it’s for</h3>
-              <p data-translate="proj_who_desc">Students, young professionals, hobbyists, travelers — anyone who wants to do more, together.</p>
+              <p data-translate="proj_who_desc">Students, young professionals, hobbyists, travelers - anyone who wants to do more, together.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" style="padding: 40px 0;">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head" style="margin-bottom: 40px;">
             <div class="eyebrow" data-translate="roadmap_eyebrow">What's next</div>
             <h2 class="title" data-translate="roadmap_title">Roadmap</h2>
             <p class="lead" data-translate="roadmap_lead">Our plan to bring MeeDo to life and grow the community.</p>
           </div>
           
-          <div class="timeline">
+          <div class="timeline" style="padding: 0; position: relative;">
+            <button class="scroll-arrow left" onclick="scrollTimeline(-1)" aria-label="Scroll left">&#10094;</button>
             <div class="timeline-items" data-auto-scroll-timeline>
               <!-- Phase 1 -->
               <div class="timeline-item">
@@ -101,8 +102,8 @@
               <div class="timeline-item">
                 <div class="timeline-marker"><span class="timeline-dot" data-translate="phase4">Phase 4</span></div>
                 <div class="timeline-content">
-                  <h3 data-translate="phase4_title">Growth / Market Fit</h3>
-                  <p class="muted" data-translate="phase4_desc">Combining our roadmap with user feedback to ensure rapid growth and a product that truly satisfies our community.</p>
+                  <h3 data-translate="phase5_title">Monetization</h3>
+                  <p class="muted" data-translate="phase5_desc">Don't worry ;) No paywalls. We're designing a win-win model that adds value for everyone without charging users to use MeeDo.</p>
                 </div>
               </div>
 
@@ -110,8 +111,8 @@
               <div class="timeline-item">
                 <div class="timeline-marker"><span class="timeline-dot" data-translate="phase5">Phase 5</span></div>
                 <div class="timeline-content">
-                  <h3 data-translate="phase5_title">Monetization</h3>
-                  <p class="muted" data-translate="phase5_desc">Don't worry ;) No paywalls. We're designing a win-win model that adds value for everyone without charging users to use MeeDo.</p>
+                  <h3 data-translate="phase4_title">Growth / Market Fit</h3>
+                  <p class="muted" data-translate="phase4_desc">Combining our roadmap with user feedback to ensure rapid growth and a product that truly satisfies our community.</p>
                 </div>
               </div>
 
@@ -134,13 +135,14 @@
               </div>
 
             </div>
+            <button class="scroll-arrow right" onclick="scrollTimeline(1)" aria-label="Scroll right">&#10095;</button>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" style="padding: 40px 0;">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head" style="margin-bottom: 40px;">
             <div class="eyebrow" data-translate="tech_eyebrow">Under the hood</div>
             <h2 class="title" data-translate="tech_title">Technology</h2>
             <p class="lead" data-translate="tech_lead">Built for performance and scale using modern, reliable tools.</p>
@@ -178,7 +180,7 @@
               Have feedback or want to collaborate?
             </div>
             <div>
-              <a class="btn-primary" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Project%20Inquiry" data-translate="proj_feedback2">Email us</a>
+              <a class="btn btn-primary" href="mailto:meedo.infos@gmail.com?subject=MeeDo%20Project%20Inquiry&body=Hello%20MeeDo%20Team,%0D%0A%0D%0AI%E2%80%99m%20interested%20in%20your%20project%20and%20would%20like%20to%20discuss%20potential%20collaboration%20or%20share%20some%20feedback.%0D%0A%0D%0ABest%20regards," data-translate="proj_feedback2">Email us</a>
             </div>
           </div>
         </div>
